@@ -1,0 +1,29 @@
+let 입력받은값 = Number(prompt("홀수를 입력해주세요.")); //홀수값
+let output = ''; // 결과값 담을 변수값
+
+for(let i=0;i<입력받은값;i++){
+    for(let j=입력받은값-1; j>i; j--){
+	output += ' '
+    }
+		    
+    for(let j=0;j<2*i+1;j++){
+	output += '*';
+    }
+    output += '\n'
+}
+// 아래쪽 다이아몬드	
+for(let i=1;i<입력받은값;i++){
+   for(let j=0;j<i;j++){
+	 output += ' '
+   }
+	
+    for(let j=2*입력받은값-1;j>2*i;j--){
+         output += '*'
+    }
+    output += '\n'
+}
+
+
+
+
+console.log(output);
